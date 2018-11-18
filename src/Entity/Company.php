@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Class Company.
  */
-abstract class Company
+abstract class Company implements CompanyTaxInterface
 {
     /**
      * @var int

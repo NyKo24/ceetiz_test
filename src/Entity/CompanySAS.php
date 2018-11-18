@@ -11,6 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CompanySAS extends Company
 {
+    const TAX_PERCENT = 0.33;
+
     /**
      * @var string
      * @ORM\Column(type="string")
@@ -31,5 +33,10 @@ class CompanySAS extends Company
     public function setRegisteredAddress(string $registeredAddress): void
     {
         $this->registeredAddress = $registeredAddress;
+    }
+
+    public function getTaxPercent(): float
+    {
+        return self::TAX_PERCENT;
     }
 }

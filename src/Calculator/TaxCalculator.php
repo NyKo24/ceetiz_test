@@ -1,15 +1,13 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: nicolas
- * Date: 18/11/2018
- * Time: 23:22
- */
 
 namespace App\Calculator;
 
+use App\Entity\CompanyTaxInterface;
 
 class TaxCalculator
 {
-
+    public function calculateTaxOfAnnualBusinessAmount(int $annualBusinessAmount, CompanyTaxInterface $companyTax): float
+    {
+        return $annualBusinessAmount * $companyTax->getTaxPercent();
+    }
 }

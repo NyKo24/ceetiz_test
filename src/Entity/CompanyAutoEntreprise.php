@@ -11,4 +11,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CompanyAutoEntreprise extends Company
 {
+    const TAX_PERCENT = 0.25;
+
+    public function getTaxPercent(): float
+    {
+        return self::TAX_PERCENT;
+    }
 }
